@@ -1,0 +1,30 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+<script>
+    $(function () {
+        //mouseover-mouseout子元素的移入移出也会触发父元素的事件
+        $(".father").mouseover(function  ()  {
+            console.log("鼠标移入father");
+        });
+        $(".father").mouseout(function () {
+            console.log("鼠标移出father");
+        });
+        //mouseenter-mouseleave子元素的移入移出不会触发父元素的事件
+        $(".father").mouseenter(function () {
+            console.log("鼠标移入father");
+        }); 
+        $(".father").mouseleave(function () {
+            console.log("鼠标移出father");
+        });
+    })
+</script>
+<body>
+    
+</body>
+</html>

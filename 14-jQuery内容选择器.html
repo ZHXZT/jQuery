@@ -1,0 +1,29 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <script src="js/jquery-1.11.3/jquery.min.js"></script>
+    <script>
+        $(function() {
+
+            var $div = $("div:empty");
+            // :empty  找到既没有文本也没有子元素的
+
+            var $div = $("div:parent");
+            // ：parent 找到有文本或者有子元素的
+
+            var $div = $("div:contains('xzt')");
+            // ：contains 找到包含指定文本内容的
+
+            var $div = $("div:has('span')")
+            // ：has 找到包含指定子元素的
+        })
+    </script>
+</head>
+<body>
+    
+</body>
+</html>

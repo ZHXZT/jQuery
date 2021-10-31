@@ -1,0 +1,42 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <script>
+          window.onload = function (ev) {
+            //   cookie：会话跟踪技术  客户端
+            //   session：会话跟踪技术  服务端
+
+            // cookie作用：将网页中数据保存到浏览器
+
+            // cookie生命周期：默认位一次会话
+            // 通过expires设置过期时间且过期时间没有过期，那么下次打开浏览器还是存在
+            // 通过expires设置过期时间，过期时间过期，会立即删除保存的数据
+
+            // cookie注意点：默认不会保存任何数据
+            // cookie不能一次保存多条数据，智能一条一条添加
+            // cookie有大小和个数限制
+ 
+            // cookie作用范围：同一浏览器的同一路径下访问
+            // 若在同一浏览器中，默认情况下一路径就可以访问
+            // 若在同一浏览器想让上一级目录也能访问保存的cookie，需要添加一个path属性
+            // document.cookie = "name=zs;path=/;";
+            // 若在www.it666.com下保存了一个cookie，在edu.it666.com是无法访问的；要想也能访问
+            document.cookie = "name=zs;path=/;domain=127.0.0.1"
+
+            alert(document.cookie);
+            // var data = new Date();
+            // data.setDate(data.getDate() + 1);
+
+            // document.cookie = "age=33;expires=" + data.toGMTString() + ";";
+            // alert(document.cookie);
+          }
+    </script>
+</head>
+<body>
+    
+</body>
+</html>

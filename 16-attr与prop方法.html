@@ -1,0 +1,32 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <script src="js/jquery-1.11.3/jquery.min.js"></script>
+    <script>
+        $(function() {
+
+            console.log($("span").attr("class"));
+            $("span").attr("class","box");
+            // 传递一个参数，代表获取属性节点的值
+            // 传递两个参数，代表设置属性节点的值
+            // 获取：无论找到多少个元素，都只会返回第一个元素指定的属性节点的值
+            // 设置：找到多少个元素设置多少个元素
+            $(("span").removeAttr("class name"));
+            // 删除所有找到元素指定的属性节点
+
+
+            console.log($("span").prop("class"));
+            $("span").prop("class","box");
+            // 用法与attr一样
+            // 具有true和false属性的属性节点用prop，其余用attr
+        });
+    </script>
+</head>
+<body>
+    
+</body>
+</html>

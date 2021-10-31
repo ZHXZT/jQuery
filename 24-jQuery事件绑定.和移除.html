@@ -1,0 +1,32 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+<script>
+    // 事件绑定
+    // 1.方便，但部分事件jQuery没有实现;可以添加多个事件,不会覆盖
+    $("button").click(function() {
+
+    })
+
+    // 2.麻烦,但所有js事件都可以添加;可以添加多个事件,不会覆盖
+    $("button").on("click",function (){
+
+    })
+
+    // 事件移除
+    $("button").off();
+    // off方法不传递参数,会移除全部事件
+    $("button").off("click");
+    // 传递一个参数,会移除指定类型的事件
+    $("button").off("click",test1);
+    // 传递两个参数,会移除至地面类型的指定事件
+</script>
+<body>
+    
+</body>
+</html>

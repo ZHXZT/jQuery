@@ -1,0 +1,40 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <script>
+        $(function () {
+            $("button").eq(0).click(function () {
+                $(".one").animate({     //链式自定义动画
+                    width:500,
+                },1000).delay(2000).animate({
+                    height:500
+                },1000)
+            });
+            $("button").eq(1).click(function () {
+                // 立即停止当前动画，继续后续的动画
+                $("div").stop;
+                $("div").stop(false);
+                $("div").stop(false,false);
+
+                // 立即停止当前和后续的全部动画
+                $("div").stop(true);
+                $("div").stop(true,false);
+
+                // 立即完成当前动画，继续执行后续动画
+                $("div").stop(false,true);
+
+                // 立即完成当前动画，停止后续全部动画
+                $("div").stop(true,true);
+
+            });
+        });
+    </script>
+</head>
+<body>
+    
+</body>
+</html>

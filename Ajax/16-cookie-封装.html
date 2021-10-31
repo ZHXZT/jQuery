@@ -1,0 +1,36 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <script>
+        window.onload = function () {
+            function addcookie(key,value,day,path,domain) {
+
+            }
+
+        function getcookie(key) {
+            var res =document.cookie.split(";");
+        for(var i = 0;i < res.length;i++) {
+            var temp = res[i].split("=");
+            if(temp[0].trim() === "score") {
+                console.log(temp[1]);
+            }
+        }
+        }
+        function delcookie (key,path) {
+            addcookie(key,getcookie(key),-1,path);
+        }
+        delcookie("name","");
+
+        }
+
+     
+    </script>
+</head>
+<body>
+    
+</body>
+</html>

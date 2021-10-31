@@ -1,0 +1,39 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <script>
+        $(function() {
+            $(".son").click(function() {
+
+                // 阻止事件冒泡的两种方法
+                return false;
+                event.stopPropagation();
+
+            });
+            $("father").click(function() {
+
+            });
+
+            $("a").click(function() {
+                // 阻止默认行为的两种方法
+                return false;
+                event.preventDefault();
+            });
+
+            // jQuery事件自动触发
+
+            // $(".son").trigger("click");
+            // $(".son").triggerHandler("click");
+            // trigger来自动触发，会触发事件冒泡     触发默认行为
+            // triggerhandler来自动触发事件，不会触发事件冒泡       不会触发默认行为
+
+        });
+     </script>
+     <body>
+         
+     </body>
+</html>

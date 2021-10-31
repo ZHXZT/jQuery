@@ -1,0 +1,24 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+<script>
+    // 自定义事件就是创建一个事件库没有的事件
+    // 自定义事件条件
+    // 1.事件必须通过on绑定
+    // 2.事件必须通过trigger触发
+    $(function () {
+        $("son").on("myclick",function () {
+            alert("son");
+        });
+        $("son").trigger("myclick");
+    })
+</script>
+<body>
+    
+</body>
+</html>

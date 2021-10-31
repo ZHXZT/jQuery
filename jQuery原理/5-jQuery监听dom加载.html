@@ -1,0 +1,37 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <script>
+        // onload事件会等在dom元素加载完毕，且资源加载完毕再执行
+        // domcontentloaded事件只会等到dom元素加载完毕就会执行回调
+        window.onload = function (ev) {
+            var res = document.querySelectorAll("div");
+            console.log(res);
+        }
+        // domcontentloaded事件只会等到dom元素加载完毕就会执行回调
+        document.addEventListener("DOMContentLoaded",function () {
+            var res = document.querySelectorAll("div");
+            console.log(res);
+            
+            // document.readyState属性有以下状态、
+            // uninitialiized--还未载入
+            // loading--载入中
+            // interactive--已加载
+            // complete--载入完成
+            // onreadystatechange事件专门监听document.readystate属性改变的
+            document.attachevent("onreadystatechange",function () {
+                if(document.readyState == "complete") {
+                    console.log("onreadystatechange");
+                }
+            })
+        });
+    </script>
+</head>
+<body>
+    
+</body>
+</html>

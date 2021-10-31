@@ -1,0 +1,117 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>HOMEPAGE</title>
+    <!-- <link rel="stylesheet" href="main.css"> -->
+
+    <script src="./jquery.js"></script>
+    <script text="text/javascript">
+        $(function () {
+            
+            $('.tab-item').mouseleave(function () {
+
+                $(this).addClass('active').siblings('li').removeClass('active');
+                var idx = $(this).index();
+                console.log(idx)
+                $('.right>.main').eq(idx).addClass('selected').siblings('div').removeClass('selected');
+            });
+        });
+    </script>
+</head>
+
+<body>
+    <div class="box">
+        <div class="left">
+            <ul class="tab">
+                <li class="tab-item active">个人简介</li>
+                <li class="tab-item">特长1</li>
+                <li class="tab-item">特长2</li>
+                <li class="tab-item">特长3</li>
+                <li class="tab-item">特长4</li>
+                <li class="tab-item ">特长5</li>
+            </ul>
+        </div>
+        <div class="right">
+            <div class="main selected">
+                <div class="word">
+                    <h1>
+                        邓绮童
+                    </h1>
+                    <p>
+                        广东肇庆人，现就读于广东海洋大学，是一名大二学生。
+                        身高一米六，但是常常被人认为是一米五五。
+                        性格热情开朗，但是因为长着一张很凶的脸，经常吓哭刚刚见面的小孩子。
+                        - 兴趣广泛，热爱生活和可爱浪漫的东西。
+
+                    </p>
+                </div>
+                <div class="photo">
+                    <!-- <img src="./zhaopian/自己.jpg" alt="自拍照" style="transform: rotate(180deg);"> -->
+                </div>
+            </div>
+
+            <div class="main">
+                <div class="word">
+                    <h1>积极好学</h1>
+                    <p>会前端网页，C语言，pr视频剪辑等基本操作
+                        ps：这个介绍页面就是我直接做的我OvO
+                        点击右图查看我第一次做的视频吧。
+                    </p>
+                </div>
+                <div class="photo">
+                    <!-- <img src="./zhaopian/招新.jpg" alt=""> -->
+                    </a>
+                </div>
+
+            </div>
+            <div class="main">
+                <div class="word">
+                    <h1>兴趣广泛</h1>
+                    <p>热爱硬笔和书法;具有较强的动手能力，喜欢做手工和做饭;喜欢阅读和唱歌</p>
+                </div>
+                <div class="photo">
+                    <!-- <img src="./zhaopian/书法作品.jpg" alt=""> -->
+
+                </div>
+            </div>
+            <div class="main">
+                <div class="word">
+                    <h1>正能量</h1>
+                    <p>
+                        积极参与家乡和学校的志愿活动，也曾经为附近小学上过义教书法课
+                    </p>
+                </div>
+                <div class="photo">
+                    <!-- <img src="./zhaopian/义教.jpg" alt=""> -->
+
+                </div>
+            </div>
+            <div class="main">
+                <div class="word">
+                    <h1>热情开朗，乐于交友</h1>
+                    <p></p>
+                </div>
+                <div class="photo">
+                    <!-- <img src="./zhaopian/义教2.jpg" alt=""> -->
+                </div>
+            </div>
+            <div class="main selected">
+                <div class="word">
+                    <h1>吃苦耐劳</h1>
+                    <p>
+                        独立自强对于我来说是我十分看重的品性，正因为自己看重，所以自身的自理能力和适应力也比较强。其可体现在我今年整个暑假在湛江湾实验室没有住宿条件下我也可以在那里学习等事件上。
+                    </p>
+                </div>
+                <div class="photo">
+                    <!-- <img src="./zhaopian/做收音机.jpg" alt=""> -->
+                </div>
+            </div>
+
+        </div>
+
+</body>
+
+</html>

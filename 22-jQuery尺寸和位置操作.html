@@ -1,0 +1,27 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+<script>
+    // 1.获取元素的宽度      设置
+    console.log($(".father").width());
+    // 2.获取元素距离窗口的偏移位    设置
+    console.log($(".son").offset().left);
+    // 3.获取元素距离定位元素的偏移位  不能设置
+    console.log($(".son").position().left);
+    // 4.获取滚动条的偏移位  设置
+    console.log($(".scroll").scrollTop());
+
+</script>
+<body>
+    <div class="father">
+        <div class="son">
+            <div class="scroll"></div>
+        </div>
+    </div>
+</body>
+</html>

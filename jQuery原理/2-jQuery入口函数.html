@@ -1,0 +1,41 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <script>
+
+        // 1.传入‘ ’null undefined NAN 0 false 会返回一个空的jQuery对象
+        console.log($(null));
+
+        // 2.传入html片段 会将创建好的dom元素储存到jquery对象中返回
+        console.log($('<p>1</p> <p>2</p>'));
+
+        // 3.传入选择器  会将找到的所有元素储存到jQuery对象中返回
+        console.log($('li'));
+
+        // 4.传入数组  将数组中储存的元素依次储存到jQuery对象返回
+        console.log($([1,2,3,6,4]));
+
+        // 5.传入伪数组 将数组中储存的元素依次储存到jQuery对象返回
+        var arr = {0:"xzt",1:"xz",2 :"x",length:3};
+        console.log($(arr));
+
+        // 6.传入对象 将传入对象储存到jQuery对象返回
+        function person () {}
+        console.log($(new person()));
+
+
+        // 7.传入dom元素 将传入dom元素储存到jQuery对象返回
+        console.log($(document.createElement('div')));
+
+        // 8.传入基本数据类型 将传入基本数据类型储存到jQuery对象返回
+        console.log($(true));
+    </script>
+</head>
+<body>
+    
+</body>
+</html>

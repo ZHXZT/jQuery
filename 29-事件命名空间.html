@@ -1,0 +1,31 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+<script>
+    $(function () {
+        // 事件命名空间有效的条件
+        // 1.事件通过on绑定
+        // 2.通过trigg触发事件
+        
+        $("son").on("click.zs",function () {
+            alert("1");
+            //张三的click
+        });
+        $("son").on("click.ls",function () {
+            alert("2");
+            // 李四的click
+        });
+
+        $("son").trigger("click.zs");//只触发张三的click
+        $("son").trigger("click");//触发张三和李四的click
+    })
+</script>
+<body>
+    
+</body>
+</html>

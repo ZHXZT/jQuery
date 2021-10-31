@@ -1,0 +1,73 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <style>
+        *{
+            margin: 0;
+            padding: 0;
+        }
+        .nav{
+            list-style: none;
+            width: 300px;
+            margin: 100px auto;
+
+        }
+        .sub {
+            display: none;
+        }
+        .nav>li{
+            border: 1px solid #000;
+            line-height: 35px; 
+            border-bottom: none;
+            text-indent: 2rem;
+        }
+        .nav>li:last-child{
+            border-bottom: 1px solid #000;
+        }
+        .sub>li{
+            list-style: none;
+            background: mediumblue;
+            border-bottom: 1px solid #000;
+        }
+        .sub>li:hover{
+            background: red;
+        }
+    </style>
+    <script src="js/jquery-1.11.3/jquery.min.js"></script>
+    <script>
+        $(function () {
+            $(".nav>li").click(function() {
+                // 1.拿到二级菜单
+                var $sub = $(this).children("sub");
+                // 2.展开二级菜单
+                $sub.slideDown(1000);
+                // 3.拿到非当前分菜单
+                var othersub = $(this).siblings().children("sub");
+                // 4.让其他二级菜单收起
+                othersub.slideUp(1000);
+            });
+        });
+    </script>
+</head>
+<body>
+    <ul class="nav">
+        <li>一级菜单
+            <ul class="sub">
+                <li>二级菜单</li>
+                <li>二级菜单</li>
+                <li>二级菜单</li>
+                <li>二级菜单</li>
+                <li>二级菜单</li>
+            </ul></li>
+        <li>一级菜单</li>
+        <li>一级菜单</li>
+        <li>一级菜单</li>
+        <li>一级菜单</li>
+    </ul>
+    
+</body>
+</html>
